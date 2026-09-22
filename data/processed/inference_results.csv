@@ -1,0 +1,10 @@
+image_name,class_name,confidence,x1,y1,x2,y2
+bus.jpg,bus,0.873,22.9,231.3,805.0,756.8
+bus.jpg,person,0.866,48.6,398.6,245.3,902.7
+bus.jpg,person,0.853,669.5,392.2,809.7,877.0
+bus.jpg,person,0.825,221.5,405.8,345.0,857.5
+bus.jpg,person,0.261,0.0,550.5,63.0,873.4
+bus.jpg,stop sign,0.255,0.1,254.5,32.6,324.9
+zidane.jpg,person,0.836,114.9,197.4,1114.5,711.9
+zidane.jpg,person,0.819,748.5,41.9,1143.1,713.0
+zidane.jpg,tie,0.291,439.5,437.1,524.3,709.2
