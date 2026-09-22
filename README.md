@@ -14,7 +14,7 @@ sql/                     DDL-схема и примеры запросов (JOIN
 scripts/clean_data.py                очистка данных (Pandas)
 scripts/eda.py                       разведочный анализ + графики
 scripts/run_inference.py             инференс YOLOv8n на тестовых изображениях
-data/raw/                            сырые (синтетические) данные
+data/raw/                            сырые данные
 data/processed/                      очищенные данные и результаты инференса
 reports/figures/                     сохранённые графики EDA
 ```
