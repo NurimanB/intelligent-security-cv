@@ -17,6 +17,7 @@ from ultralytics import YOLO
 MODEL_WEIGHTS = "yolov8n.pt"
 IMAGES_DIR = "data/samples"
 OUTPUT_CSV = "data/processed/inference_results.csv"
+ANNOTATED_DIR = "reports/figures"
 
 
 def run_inference(model_path: str, images_dir: str) -> pd.DataFrame:
@@ -28,6 +29,10 @@ def run_inference(model_path: str, images_dir: str) -> pd.DataFrame:
         results = model.predict(source=str(image_path), verbose=False)
 
         for result in results:
+            # сохраняем изображение с отрисованными bounding box для отчёта
+            annotated_path = Path(ANNOTATED_DIR) / f"inference_{image_path.stem}.jpg"
+            result.save(filename=str(annotated_path))
+
             boxes = result.boxes
             for box in boxes:
                 x1, y1, x2, y2 = box.xyxy[0].tolist()
