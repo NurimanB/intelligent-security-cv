@@ -3,7 +3,7 @@ End-to-end machine learning pipeline for real-time object detection and metadata
 
 ## О проекте
 
-Демо-проект, иллюстрирующий типичные задачи стажёра (junior data science
+Проект, иллюстрирующий типичные задачи стажёра (junior data science
 assistant) в системе видеоаналитики: извлечение данных из БД, очистка,
 разведочный анализ (EDA) и запуск инференса готовой модели YOLOv8.
 
@@ -17,7 +17,6 @@ assistant) в системе видеоаналитики: извлечение 
 
 ```
 sql/                     DDL-схема и примеры запросов (JOIN, GROUP BY, поиск NULL)
-scripts/generate_synthetic_logs.py   генерация синтетических "сырых" данных
 scripts/clean_data.py                очистка данных (Pandas)
 scripts/eda.py                       разведочный анализ + графики
 scripts/run_inference.py             инференс YOLOv8n на тестовых изображениях
@@ -31,11 +30,13 @@ reports/figures/                     сохранённые графики EDA
 ```bash
 pip install -r requirements.txt
 
-python scripts/generate_synthetic_logs.py   # data/raw/detection_logs_raw.csv
 python scripts/clean_data.py                # data/processed/detection_logs_clean.csv
 python scripts/eda.py                       # reports/figures/*.png
 python scripts/run_inference.py             # data/processed/inference_results.csv
 ```
+
+`data/raw/detection_logs_raw.csv` уже входит в репозиторий, поэтому
+генерировать его заново не требуется.
 
 Веса `yolov8n.pt` скачиваются автоматически библиотекой `ultralytics` при
 первом запуске.
