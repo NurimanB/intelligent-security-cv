@@ -42,3 +42,5 @@ PostgreSQL:
 psql -U postgres -d security_demo -f sql/01_schema.sql
 psql -U postgres -d security_demo -f sql/02_queries.sql
 ```
+
+Пример реального вывода этих запросов — `sql/query_results_example.txt`.
