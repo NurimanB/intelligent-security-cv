@@ -1,6 +1,10 @@
 # intelligent-security-cv
 End-to-end machine learning pipeline for real-time object detection and metadata aggregation, built with PyTorch, YOLOv8, OpenCV, and PostgreSQL.
 
+![Детекция и трекинг: YOLOv8n + ByteTrack](reports/figures/tracking_demo.gif)
+
+*Дообученная YOLOv8n + ByteTrack: у каждого объекта свой ID на протяжении видео (видео: Pexels).*
+
 ## О проекте
 
 Проект в системе видеоаналитики: извлечение данных из БД, очистка,
