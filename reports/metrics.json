@@ -1,0 +1,18 @@
+{
+  "data": "VOC.yaml",
+  "model": "yolov8n.pt",
+  "epochs": 30,
+  "train_fraction": 0.5,
+  "weights": "runs/detect/voc_security/weights/best.pt",
+  "precision": 0.8694,
+  "recall": 0.804,
+  "mAP50": 0.8887,
+  "mAP50_95": 0.6735,
+  "per_class_AP50": {
+    "bicycle": 0.8817,
+    "bus": 0.8593,
+    "car": 0.9203,
+    "motorbike": 0.8849,
+    "person": 0.8971
+  }
+}

@@ -65,8 +65,25 @@ psql -U postgres -d security_demo -f sql/03_tracks.sql   # таблица тре
 
 ## Результаты
 
+YOLOv8n, дообученная на 5 классах Pascal VOC (person, car, bus, motorbike, bicycle):
+30 эпох, 50% обучающей выборки, Google Colab (GPU T4). Метрики посчитаны на
+валидационной выборке VOC (`reports/metrics.json`).
+
 | Модель | Данные | mAP@0.5 | mAP@0.5:0.95 | Precision | Recall |
 |---|---|---|---|---|---|
-| YOLOv8n, fine-tuned | VOC, 5 классов | — | — | — | — |
+| YOLOv8n, fine-tuned | VOC, 5 классов | **0.889** | 0.674 | 0.869 | 0.804 |
 
-Таблица заполняется значениями из `reports/metrics.json` после обучения.
+| Класс | AP@0.5 |
+|---|---|
+| car | 0.920 |
+| person | 0.897 |
+| motorbike | 0.885 |
+| bicycle | 0.882 |
+| bus | 0.859 |
+
+Кривые обучения: mAP ещё растёт к 30-й эпохе, так что более долгое обучение,
+скорее всего, даст прирост.
+
+![Кривые обучения](reports/figures/train_results.png)
+
+![Матрица ошибок](reports/figures/train_confusion_matrix.png)
